@@ -1,0 +1,10 @@
+paths:
+  raw_data: data/raw
+  interim_data: data/interim
+  processed_data: data/processed
+  figures: reports/figures
+  results: reports/results
+
+project:
+  target_name: SoH
+  random_state: 42
