@@ -1,7 +1,19 @@
-# Data
-data/raw/
-data/interim/
-data/processed/
+# Data folders: keep folder structure, ignore contents
+data/raw/*
+!data/raw/.gitkeep
+
+data/interim/*
+!data/interim/.gitkeep
+
+data/processed/*
+!data/processed/.gitkeep
+
+# Large data files
+*.csv
+*.zip
+*.parquet
+*.h5
+*.pkl
 
 # Python
 __pycache__/
@@ -12,10 +24,12 @@ __pycache__/
 .venv/
 .env
 
-# Outputs
-outputs/
-reports/figures/
-reports/results/
+# Reports generated automatically
+reports/figures/*
+!reports/figures/.gitkeep
+
+reports/results/*
+!reports/results/.gitkeep
 
 # System
 .DS_Store
