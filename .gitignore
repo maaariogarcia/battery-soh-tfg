@@ -1,4 +1,6 @@
-# Data folders: keep folder structure, ignore contents
+# ------------------------------
+# Data: keep structure, ignore real contents
+# ------------------------------
 data/raw/*
 !data/raw/.gitkeep
 
@@ -8,29 +10,54 @@ data/interim/*
 data/processed/*
 !data/processed/.gitkeep
 
-# Large data files
-*.csv
-*.zip
+# Optional local datasets outside data/
+datasets/
+
+# Heavy file formats (prevent accidental commits)
 *.parquet
+*.feather
 *.h5
+*.hdf5
 *.pkl
+*.joblib
+*.npz
+*.npy
+*.zip
+*.7z
+*.tar
+*.gz
 
-# Python
-__pycache__/
-*.pyc
-.ipynb_checkpoints/
-
-# Environments
-.venv/
-.env
-
-# Reports generated automatically
+# ------------------------------
+# Reports/artifacts generated automatically
+# ------------------------------
 reports/figures/*
 !reports/figures/.gitkeep
 
 reports/results/*
 !reports/results/.gitkeep
 
-# System
+# ------------------------------
+# Python
+# ------------------------------
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments / local env
+.venv/
+venv/
+.env
+
+# Jupyter checkpoints and executed outputs
+*.nbconvert.ipynb
+
+# ------------------------------
+# OS/editor
+# ------------------------------
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
