@@ -61,3 +61,17 @@ configs/        # configuración del proyecto
 - No subir datos reales al repositorio.
 - Mantener `data/` y `reports/` con estructura vía `.gitkeep`.
 - Registrar en `docs/` cualquier decisión metodológica antes de codificar.
+
+## Auditoría inicial de datos crudos (fase 1)
+
+Para ejecutar la inspección de `data/raw` y generar reportes CSV en `reports/results/`:
+
+```bash
+python src/data/inspect_raw.py
+```
+
+El script no modifica `data/raw`; únicamente lee los CSV disponibles localmente y escribe:
+- `raw_file_inventory.csv`
+- `raw_columns_summary.csv`
+- `raw_basic_quality_report.csv`
+- `raw_impedance_inventory.csv`
